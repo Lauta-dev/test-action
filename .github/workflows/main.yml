@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Screenshot Capture
-        uses: lauta-dev/website-screenshot-capture-action
+        uses: lauta-dev/website-screenshot-capture-action@main
         with:
           pages_file: pages.yml
           width: 412
