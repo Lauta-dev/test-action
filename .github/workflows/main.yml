@@ -39,7 +39,7 @@ jobs:
 
       - name: remove meta
         run: |
-            for f in *.png; do
+            for f in *.webp; do
               cwebp "$f" -o "webp/$f"
             done
 
