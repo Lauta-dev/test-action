@@ -1,0 +1,22 @@
+name: Take screenshot
+on:
+  - push
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Generar imgenes
+        uses: lauta-dev/website-screenshot-capture-action@v1.1.1
+        with:
+          pages_file: pages.yml
+
+      - name: list
+        run: ls
+      
+      - name: list
+        run: ls screenshots
+
