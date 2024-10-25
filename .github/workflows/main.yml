@@ -6,6 +6,9 @@ jobs:
   screenshots:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
       - name: Screenshot Capture
         uses: lauta-dev/website-screenshot-capture-action@main
         with:
