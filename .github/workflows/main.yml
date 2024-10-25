@@ -30,7 +30,7 @@ jobs:
         run: sudo apt-get install webp
       
       - name: Create content
-        run: mkdir
+        run: mkdir webp
 
       - name: Download artifact
         uses: actions/download-artifact@v3
@@ -40,12 +40,13 @@ jobs:
       - name: remove meta
         run: |
             for f in $pngs; do
-              cwebp "$f" -o "$f"
+              cwebp "$f" -o "webp/$f"
             done
 
       - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
+          path: webp/
           name: screenshots-without-meta
 
 
