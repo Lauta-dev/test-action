@@ -11,7 +11,14 @@ jobs:
 
       - name: Generar imgenes
         uses: lauta-dev/website-screenshot-capture-action@v1.1.1
-        
+        with:
+          name: github
+          url: "https://www.google.com/"
+          pages_file: pages.yml
+          width: 412
+          height: 915
+          type: webp
+          quality: 60
 
       - name: list
         run: ls
