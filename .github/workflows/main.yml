@@ -14,7 +14,7 @@ jobs:
         with:
           pages_file: pages.yml
           type: webp
-          quality: 60
+          quality: 40
       
       - name: Upload artifact
         uses: actions/upload-artifact@v3
