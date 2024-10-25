@@ -22,9 +22,36 @@ jobs:
           name: screenshots
           path: screenshots/
 
-  push-images:
+  remove-metadata:
     runs-on: ubuntu-latest
     needs: [screenshots]
+    steps:
+      - name: install cwebp
+        run: sudo apt-get install webp
+      
+      - name: Create content
+        run: mkdir
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: screenshots
+
+      - name: remove meta
+        run: |
+            for f in $pngs; do
+              cwebp "$f" -o "$f"
+            done
+
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshots-without-meta
+
+
+  push-images:
+    runs-on: ubuntu-latest
+    needs: [remove-metadata]
     steps:
       - name: Clone repository
         run: git clone https://github.com/Lauta-dev/resource.git .
@@ -32,7 +59,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: screenshots
+          name: screenshots-without-meta
 
       - name: Set up Git
         run: |
