@@ -12,7 +12,7 @@ jobs:
       - name: Screenshot Capture
         uses: lauta-dev/website-screenshot-capture-action@re
         with:
-          url: https://g.com
+          url: https://google.com
           name: n
           type: webp
           quality: 40
