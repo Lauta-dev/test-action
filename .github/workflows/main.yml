@@ -12,7 +12,8 @@ jobs:
       - name: Screenshot Capture
         uses: lauta-dev/website-screenshot-capture-action@re
         with:
-          pages_file: pages.yml
+          url: https://g.com
+          name: n
           type: webp
           quality: 40
       - name: ls
