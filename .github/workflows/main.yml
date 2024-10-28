@@ -16,9 +16,9 @@ jobs:
           name: n
           type: webp
           quality: 40
-          output: dir
+          output: foto
       - name: ls
         run: ls
 
       - name: ls Screenshots
-        run: ls dir
+        run: ls foto
