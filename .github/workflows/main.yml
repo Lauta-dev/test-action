@@ -1,10 +1,13 @@
 name: Take screenshot
 on:
   - push
+env:
+  output: 'asd'
 
 jobs:
   screenshots:
     runs-on: ubuntu-latest
+    
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -16,9 +19,9 @@ jobs:
           name: n
           type: webp
           quality: 40
-          output: foto
+          output: ${{ output }}
       - name: ls
         run: ls
 
       - name: ls Screenshots
-        run: ls foto
+        run: ls $output
