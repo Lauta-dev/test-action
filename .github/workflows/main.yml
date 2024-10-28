@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Screenshot Capture
-        uses: lauta-dev/website-screenshot-capture-action@migrate_to_ts
+        uses: lauta-dev/website-screenshot-capture-action@main
         with:
           url: https://google.com
           name: n
