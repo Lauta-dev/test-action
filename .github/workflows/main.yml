@@ -10,14 +10,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Screenshot Capture
-        uses: lauta-dev/website-screenshot-capture-action@re
+        uses: lauta-dev/website-screenshot-capture-action@migrate_to_ts
         with:
           url: https://google.com
           name: n
           type: webp
           quality: 40
+          output: dir
       - name: ls
         run: ls
 
       - name: ls Screenshots
-        run: ls screenshots
+        run: ls dir
