@@ -37,14 +37,14 @@ jobs:
     needs: screenshots
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy to GitHub Pages
+        run: git clone https://github.com/Lauta-dev/test-action.git .
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
           name: screenshots
           path: screenshots
 
-      - name: Deploy to GitHub Pages
-        run: git clone https://github.com/Lauta-dev/test-action.git .
 
       - name: Set up Git
         run: |
