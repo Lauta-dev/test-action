@@ -15,11 +15,9 @@ jobs:
       - name: Screenshot Capture
         uses: lauta-dev/website-screenshot-capture-action@load_js_script
         with:
-          url: https://github.com/Lauta-dev/test-action
-          name: n
-          type: jpeg
-          quality: 40
+          urls_input_file: pages.yml
           script: script.
+          output_dir: n
       - name: ls
         run: ls
 

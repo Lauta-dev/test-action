@@ -12,3 +12,4 @@ pages:
 
   - url: https://github.com/lauta-dev
     name: lauta
+    script: script.js
