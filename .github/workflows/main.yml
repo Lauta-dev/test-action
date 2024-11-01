@@ -16,20 +16,19 @@ jobs:
         uses: lauta-dev/website-screenshot-capture-action@load_js_script
         with:
           urls_input_file: pages.yml
-          script: script.
           output_dir: n
       - name: ls
         run: ls
 
       - name: ls Screenshots
-        run: ls screenshots
+        run: ls n
 
       
       - name: upload
         uses: actions/upload-artifact@v3
         with:
           name: screenshots
-          path: screenshots
+          path: n
 
   deploy:
     needs: screenshots
