@@ -9,7 +9,6 @@ pages:
     name: nodejs
   - url: https://tableconvert.com/markdown-generator
     name: ma
-
   - url: https://github.com/lauta-dev
     name: lauta
     script: script.js
