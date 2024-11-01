@@ -26,7 +26,24 @@ jobs:
       - name: ls Screenshots
         run: ls screenshots
 
-      - name: Clonar repo de recursos
+      
+      - name: upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshots
+          path: screenshots
+
+  deploy:
+    needs: screenshots
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: screenshots
+          path: screenshots
+
+      - name: Deploy to GitHub Pages
         run: git clone https://github.com/Lauta-dev/test-action.git .
 
       - name: Set up Git
@@ -43,4 +60,3 @@ jobs:
       - name: Guardar captura
         run: |
           git push origin main
-
