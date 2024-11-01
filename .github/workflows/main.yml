@@ -19,7 +19,7 @@ jobs:
           name: n
           type: jpeg
           quality: 40
-          script: script.js
+          script: script.
       - name: ls
         run: ls
 
