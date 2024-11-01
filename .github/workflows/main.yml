@@ -27,7 +27,7 @@ jobs:
         run: ls screenshots
 
       - name: Clonar repo de recursos
-        run: git clone https://github.com/Lauta-dev/test-action.git
+        run: git clone https://github.com/Lauta-dev/test-action.git .
 
       - name: Set up Git
         run: |
