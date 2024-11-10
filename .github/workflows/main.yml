@@ -15,7 +15,8 @@ jobs:
       - name: Screenshot Capture
         uses: lauta-dev/website-screenshot-capture-action@load_js_script
         with:
-          urls_input_file: pages.yml
+          url: https://portafolio-seven-gules.vercel.app/
+          name: portafolio
           type: webp
       - name: ls
         run: ls
