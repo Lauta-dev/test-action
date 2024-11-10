@@ -21,7 +21,7 @@ jobs:
         run: ls
 
       - name: ls Screenshots
-        run: ls n
+        run: ls screenshots
 
       
       - name: upload
