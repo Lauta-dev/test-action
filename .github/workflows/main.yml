@@ -47,7 +47,7 @@ jobs:
         run: |
           git config user.name "${{ secrets.GH_USERNAME }}"
           git config user.email "${{ secrets.GH_MAIL }}"
-          git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Lauta-dev/test-action.git
+          git remote set-url origin https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/Lauta-dev/res-tesst.git
 
       - name: Create screenshot image
         run: |
