@@ -8,7 +8,6 @@ pages:
   - url: https://hub.doer.com/_/node
     name: nodejs
   - url: https://tableconvert.com/markdown-generator
-    name: ma
   - url: https://github.com/lauta-dev
     name: lauta
     script: script.js
