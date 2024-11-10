@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: screenshots
-          path: n
+          path: screenshots
 
   deploy:
     needs: screenshots
