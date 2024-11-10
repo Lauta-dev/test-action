@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        run: git clone https://github.com/Lauta-dev/test-action.git .
+        run: git clone https://github.com/Lauta-dev/res-tesst.git .
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
