@@ -16,7 +16,7 @@ jobs:
         uses: lauta-dev/website-screenshot-capture-action@load_js_script
         with:
           urls_input_file: pages.yml
-          output_dir: n
+          type: webp
       - name: ls
         run: ls
 
