@@ -18,18 +18,19 @@ jobs:
           urls_input_file: pages.yml
           type: webp
           dark_mode: dark
+          output_dir: s
       - name: ls
         run: ls
 
       - name: ls Screenshots
-        run: ls screenshots
+        run: ls s
 
       
       - name: upload
         uses: actions/upload-artifact@v3
         with:
-          name: screenshots
-          path: screenshots
+          name: s
+          path: s
 
   deploy:
     needs: screenshots
@@ -40,8 +41,8 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: screenshots
-          path: screenshots
+          name: s
+          path: s
 
 
       - name: Set up Git
