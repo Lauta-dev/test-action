@@ -17,6 +17,7 @@ jobs:
         with:
           urls_input_file: pages.yml
           type: webp
+          dark_mode: dark
       - name: ls
         run: ls
 
