@@ -1,18 +1,5 @@
 pages:
-  - url: https://portafolio-seven-gules.vercel.app/
+  - url: https://short-url-clien.vercel.app/
     name: portafolio
-  - url: https://cdn.myanimelist.net/images/anime/4/.jpg
-    name: cowboy 
-  - url: https://csv-viewer-eight.vercel.app/
-    name: csv-viewer
-  - url: https://hub.doer.com/_/node
-    name: nodejs
-  - url: https://tableconvert.com/markdown-generator
-    name: ma
-  - url: https://github.com/lauta-dev
-    name: lauta
-    script: script.js
-
-  - url: https://github.com/Lauta-dev/website-screenshot-capture-action/tree/load_js_script
-    name: action
-    script: script.js
+    script: g.js
+  
